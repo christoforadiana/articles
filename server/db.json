@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "title": "Contests",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "posting": 1,
+      "id": 1
+    },
+    {
+      "title": "Social Media",
+      "content": " Faucibus ornare suspendisse sed nisi lacus sed viverra tellus in.",
+      "posting": 1,
+      "id": 2
+    },
+    {
+      "title": "Contestss",
+      "content": "Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. Dolor sit amet consectetur adipiscing.",
+      "posting": 1,
+      "id": 3
+    },
+    {
+      "title": "Contestss",
+      "content": "Venenatis cras sed felis eget velit aliquet. Commodo odio aenean sed adipiscing diam donec adipiscing tristique.",
+      "posting": 1,
+      "id": 4
+    },
+    {
+      "title": "Contestss",
+      "content": "Lacus laoreet non curabitur gravida. In hendrerit gravida rutrum quisque non. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Eu volutpat odio facilisis mauris.",
+      "posting": 1,
+      "id": 5
+    }
+  ]
+}
