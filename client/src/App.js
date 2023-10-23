@@ -12,7 +12,7 @@ import {
 function App() {
   return (
     // <div className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900">
-    <div className="bg-gradient-to-r from-slate-100 via-blue-100 to-slate-900">
+    <div className="">
       <Routes>
         <Route path="" element={<LoginPage />}></Route>
         <Route path="home" element={<HomePage />}></Route>

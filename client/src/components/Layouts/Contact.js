@@ -1,87 +1,77 @@
-import React from 'react'
+import React from "react";
+import ContactPhoto from "../../images/contact-bg.jpg";
 
 const Contact = () => {
   return (
-    <section className="my-5">
-      <h2>Contact Me</h2>
-      <div className="flex-row justify-center my-auto">
-        {contactLinks.map((link) => (
-          <div className=" mx-4 my-3" key={link.name}>
-            <a href={link.link} className="ml-2 my-1 px-2 py-1 text-dark icons">
-              <i className={link.icon}></i> : {link.text}
-            </a>
+    <div>
+      <div className="bg-[url(../src/images/contact-bg.jpg)] h-2/3 flex flex-wrap items-center justify-center flex-col lg:flex-row">
+        <div className="w-full lg:w-1/2 h-full flex items-center justify-center">
+          <img src={ContactPhoto} alt="" className="h-[70vh]" />
+        </div>
+        <div className="w-full lg:w-1/2 h-1/2 lg:h-full flex items-center justify-center flex-col mt-10">
+          <div className=" flex gap-5 items-center lg:items-start justify-center flex-col">
+            <span className="flex text-dark text-4xl lg:text-5xl gap-2 font-bold">
+              CONTACT <p className="text-[#027fb5]"> ME</p>
+            </span>
           </div>
-        ))}
+        </div>
       </div>
-      {emailSent ? (
-        <>
-          <div className="flex-row my-3 justify-center">
-            <div className="col-12 col-md-8 my-5 text-center">
-              <p>
-                Thanks, your form has been submitted. I look forward to
-                connecting soon!
-              </p>
-              <button
-                onClick={() => setEmailSent(false)}
-                className="btn my-5 w-25"
-              >
-                Back to Contact Form
-              </button>
-            </div>
+      <div className="container mx-auto p-8">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="name"
+            >
+              Name
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="name"
+              type="text"
+              placeholder="Name"
+            />
           </div>
-        </>
-      ) : (
-        <div className="flex-row my-3 justify-center">
-          <form className="col-12 col-md-8" onSubmit={handleSubmit}>
-            {errorMessage && (
-              <div>
-                <p className="text-tertiary">{errorMessage}</p>
-              </div>
-            )}
-            <div className="my-1">
-              <label className="form-label" htmlFor="name">
-                Name:{" "}
-              </label>
-              <input
-                className="form-input"
-                type="text"
-                name="name"
-                defaultValue={name}
-                onBlur={handleChange}
-              />
-            </div>
-            <div className="my-1">
-              <label className="form-label" htmlFor="email">
-                Email:{" "}
-              </label>
-              <input
-                className="form-input"
-                type="text"
-                name="email"
-                defaultValue={email}
-                onBlur={handleChange}
-              />
-            </div>
-            <div className="my-1">
-              <label className="form-label" htmlFor="message">
-                Message:{" "}
-              </label>
-              <textarea
-                className="form-textarea"
-                name="message"
-                rows="8"
-                defaultValue={message}
-                onBlur={handleChange}
-              />
-            </div>
-            <button className="btn my-1" type="submit">
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="text"
+              placeholder="email"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="message"
+            >
+              Message
+            </label>
+            <textarea
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="message"
+              type="text"
+              placeholder="message"
+            />
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+            >
               Submit
             </button>
-          </form>
-        </div>
-      )}
-    </section>
+          </div>
+        </form>
+      </div>
+    </div>
   );
-}
+};
 
-export default Contact
+export default Contact;

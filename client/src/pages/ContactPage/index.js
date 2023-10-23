@@ -1,10 +1,11 @@
 import React from "react";
-import { Footer, Header } from "../../components";
+import { Contact, Footer, Header, Hero } from "../../components";
 
 const ContactPage = () => {
   return (
     <div>
       <Header />
+      <Contact />
       <Footer />
     </div>
   );

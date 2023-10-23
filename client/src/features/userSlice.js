@@ -33,8 +33,11 @@ const userSlice = createSlice({
         state.currentUser = null;
       }
     },
+    reset: (state) => {
+      state.currentUser = null;
+    }
   },
 });
 
-export const {login, register} = userSlice.actions;
+export const {login, register, reset} = userSlice.actions;
 export default userSlice.reducer;

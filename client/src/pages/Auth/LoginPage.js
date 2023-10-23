@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../features/userSlice";
-import "./Auth.css";
 import AuthPhoto from "../../images/auth-main.jpg";
 import HomePage from "../HomePage";
+import "./Auth.css";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");

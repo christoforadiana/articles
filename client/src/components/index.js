@@ -5,5 +5,6 @@ import Header from "./Layouts/Header";
 import ScrollToTop from "./Layouts/ScrollToTop";
 import About from "./Layouts/About";
 import PostCard from "./Layouts/PostCard";
+import Contact from "./Layouts/Contact";
 
-export { Footer, Navbar, Hero, Header, ScrollToTop, About, PostCard };
+export { Footer, Navbar, Hero, Header, ScrollToTop, About, PostCard, Contact };

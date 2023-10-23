@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AiOutlineHome, AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { reset } from "../../features/userSlice";
+import { AiOutlineHome, AiOutlinePhone } from "react-icons/ai";
 import { FiUser, FiFileText } from "react-icons/fi";
 import { RiMenu3Fill } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
@@ -11,6 +13,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [showNav, setShowNav] = useState(false);
   const [scroll, setScrolled] = useState(false);
+  const dispatch = useDispatch();
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 50) {
@@ -19,9 +22,14 @@ const Header = () => {
       setScrolled(false);
     }
   };
+  const handleLogout = () => {
+    dispatch(reset());
+    navigate('/')
+  };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div
       className={
@@ -63,7 +71,7 @@ const Header = () => {
               to={"/contact"}
               className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-blue-500 group-hover:before:w-full"
             >
-              <AiOutlineFundProjectionScreen fontSize={20} />
+              <AiOutlinePhone fontSize={20} />
               <span className="">Contact</span>
             </Link>
           </li>
@@ -78,14 +86,12 @@ const Header = () => {
           </li>
         </ul>
 
-        <Link
-          to="/"
-          target="_blank"
-          rel="noreferrer"
+        <button
           className="flex mx-10 gap-2 text-lg font-semibold bg-blue-900 px-5 py-[5px] border border-blue-700 rounded-sm hover:bg-blue-800 transition-all duration-200 hover:-translate-y-[2px]"
+          onClick={() => handleLogout()}
         >
           Logout
-        </Link>
+        </button>
       </div>
       <span>
         <div className="h-full lg:hidden flex items-center justify-center cursor-pointer relative">
