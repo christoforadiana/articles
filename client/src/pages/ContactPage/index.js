@@ -1,5 +1,5 @@
 import React from "react";
-import { Contact, Footer, Header, Hero } from "../../components";
+import { Contact, Footer, Header } from "../../components";
 
 const ContactPage = () => {
   return (
