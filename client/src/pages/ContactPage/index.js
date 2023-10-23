@@ -1,7 +1,13 @@
 import React from "react";
+import { Footer, Header } from "../../components";
 
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return (
+    <div>
+      <Header />
+      <Footer />
+    </div>
+  );
 };
 
 export default ContactPage;

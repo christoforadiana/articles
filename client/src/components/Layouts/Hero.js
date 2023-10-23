@@ -1,5 +1,5 @@
-import React from 'react'
-import HomePhoto from '../../images/home-main.svg'
+import React from "react";
+import HomePhoto from "../../images/home-main.svg";
 
 const Hero = () => {
   return (
@@ -21,7 +21,7 @@ const Hero = () => {
             </span>
           </h3>
           <span className="flex text-dark text-4xl lg:text-5xl gap-2 font-bold">
-            I'M <p className="text-[#027fb5]"> CHRISTOFORA</p>
+            I'M <p className="text-[#027fb5]"> CHRISTOFORA DIANA</p>
           </span>
           {/* <span className="flex text-[#ad50eb] text-2xl lg:text-3xl gap-2 font-semibold bg-gray-800 h-20 lg:h-32 w-72 lg:w-80 items-center justify-center px-5 rounded-md shadow-xl capitalize text-center"> */}
           {/* <Type /> */}
@@ -30,6 +30,6 @@ const Hero = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Hero
+export default Hero;

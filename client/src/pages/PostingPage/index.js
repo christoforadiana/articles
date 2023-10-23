@@ -1,7 +1,14 @@
 import React from "react";
+import { Footer, Header, PostCard } from "../../components";
 
 const PostingPage = () => {
-  return <div>PostingPage</div>;
+  return (
+    <div>
+      <Header />
+      <PostCard />
+      <Footer />
+    </div>
+  );
 };
 
 export default PostingPage;
