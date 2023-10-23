@@ -1,18 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const postSlice = createSlice({
+const initialState = { value: 0 };
+
+const counterSlice = createSlice({
   name: "post",
-  initialState: {
-    title: "",
-    content: "",
-  },
+  initialState,
   reducers: {
-    update: (state, action) => {
-      state.title = action.payload.title;
-      state.content = action.payload.content;
-    },
   },
 });
 
-export const { update } = postSlice.actions;
-export default postSlice.reducer;
+// export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export default counterSlice.reducer;

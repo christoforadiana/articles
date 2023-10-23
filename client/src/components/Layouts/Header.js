@@ -78,14 +78,14 @@ const Header = () => {
           </li>
         </ul>
 
-        <a
-          href="/"
+        <Link
+          to="/"
           target="_blank"
           rel="noreferrer"
           className="flex mx-10 gap-2 text-lg font-semibold bg-blue-900 px-5 py-[5px] border border-blue-700 rounded-sm hover:bg-blue-800 transition-all duration-200 hover:-translate-y-[2px]"
         >
-          Login
-        </a>
+          Logout
+        </Link>
       </div>
       <span>
         <div className="h-full lg:hidden flex items-center justify-center cursor-pointer relative">
