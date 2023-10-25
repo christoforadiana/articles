@@ -10,6 +10,13 @@ export const getPosts = createAsyncThunk("posts/getPosts", async () => {
   return response.data;
 });
 
+export const addPost = createAsyncThunk("posts/addPost", async ({title, content}) => {
+  const response = await axios.post("http://localhost:3000/posts", {
+    title, content
+  });
+  return response.data;
+});
+
 const postEntity = createEntityAdapter({
   selectId: (post) => post.id,
 });
@@ -22,6 +29,9 @@ const postSlice = createSlice({
   extraReducers: {
     [getPosts.fulfilled]: (state, action) => {
       postEntity.setAll(state, action.payload);
+    },
+    [addPost.fulfilled]: (state, action) => {
+      postEntity.addOne(state, action.payload);
     },
   },
 });

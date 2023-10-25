@@ -5,6 +5,7 @@ import Header from "./Layouts/Header";
 import ScrollToTop from "./Layouts/ScrollToTop";
 import About from "./Layouts/About";
 import Contact from "./Layouts/Contact";
+import AddPostModal from "./Posts/AddPostModal";
 
 export {
   Footer,
@@ -14,4 +15,5 @@ export {
   ScrollToTop,
   About,
   Contact,
+  AddPostModal
 };
