@@ -19,7 +19,7 @@ const Navbar = ({ showNav, setShowNav }) => {
         <ul className="flex gap-8 flex-col mt-10">
           <li className="relative group">
             <Link
-              to={"/"}
+              to={"/home"}
               className="flex gap-1 items-center justify-center cursor-pointer text-base font-bold relative"
               onClick={() => setShowNav(false)}
             >

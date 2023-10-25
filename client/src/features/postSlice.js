@@ -1,13 +1,30 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {
+  createSlice,
+  createAsyncThunk,
+  createEntityAdapter,
+} from "@reduxjs/toolkit";
+import axios from "axios";
+
+export const getPosts = createAsyncThunk("posts/getPosts", async () => {
+  const response = await axios.get("http://localhost:3000/posts");
+  return response.data;
+});
+
+const postEntity = createEntityAdapter({
+  selectId: (post) => post.id,
+});
 
 const initialState = { value: 0 };
 
-const counterSlice = createSlice({
+const postSlice = createSlice({
   name: "post",
-  initialState,
-  reducers: {
+  initialState: postEntity.getInitialState(),
+  extraReducers: {
+    [getPosts.fulfilled]: (state, action) => {
+      postEntity.setAll(state, action.payload);
+    },
   },
 });
 
-// export const { increment, decrement, incrementByAmount } = counterSlice.actions;
-export default counterSlice.reducer;
+export const postSelectors = postEntity.getSelectors((state) => state.post);
+export default postSlice.reducer;
